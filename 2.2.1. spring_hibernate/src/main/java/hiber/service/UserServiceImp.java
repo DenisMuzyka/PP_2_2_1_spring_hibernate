@@ -37,7 +37,7 @@ public class UserServiceImp implements UserService {
               .setParameter("paramModel", model)
               .setParameter("paramSeries", series)
               .getSingleResult();
-      System.out.println(car.getUser().getFirstName());
+      System.out.println("Машина принадлежит юзеру с именем " + car.getUser().getFirstName());
    }
 
 }
