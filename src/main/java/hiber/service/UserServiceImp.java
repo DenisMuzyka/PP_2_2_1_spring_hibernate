@@ -32,12 +32,8 @@ public class UserServiceImp implements UserService {
    }
 
    @Transactional
-   public void getUserFromParam(String model, int series) {
-      Car car = (Car) sessionFactory.getCurrentSession().createQuery("FROM Car c where c.model = :paramModel and c.series = :paramSeries")
-              .setParameter("paramModel", model)
-              .setParameter("paramSeries", series)
-              .getSingleResult();
-      System.out.println("Машина принадлежит юзеру с именем " + car.getUser().getFirstName());
+   public User getUserFromParam(String model, int series) {
+      return userDao.getUserFromParam(model, series);
    }
 
 }

@@ -1,6 +1,5 @@
 package hiber.model;
 
-
 import javax.persistence.*;
 import java.io.Serializable;
 

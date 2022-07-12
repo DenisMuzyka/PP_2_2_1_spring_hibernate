@@ -1,9 +1,10 @@
 package hiber.model;
 
-
 import org.hibernate.annotations.Cascade;
 
+
 import javax.persistence.*;
+
 
 @Entity
 @Table
@@ -65,6 +66,17 @@ public class User {
 
    public void setLastName(String lastName) {
       this.lastName = lastName;
+   }
+
+   @Override
+   public String toString() {
+      return "User{" +
+              "id=" + id +
+              ", firstName='" + firstName + '\'' +
+              ", lastName='" + lastName + '\'' +
+              ", email='" + email + '\'' +
+              ", car=" + car +
+              '}';
    }
 
    public String getEmail() {
